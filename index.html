@@ -16,7 +16,7 @@
             height: 100vh;
         }
         .container {
-            width: 300px;
+            width: 360px;
             background: #ffffff;
             padding: 30px;
             border-radius: 12px;
@@ -39,7 +39,7 @@
             color: #555;
         }
         input[type="text"], input[type="password"] {
-            width: 80%;
+            width: 100%;
             padding: 12px;
             margin-top: 6px;
             margin-bottom: 18px;
@@ -48,7 +48,7 @@
             font-size: 15px;
         }
         .btn {
-            width: 90%;
+            width: 100%;
             padding: 12px;
             background: #003b70;
             border: none;
@@ -75,7 +75,7 @@
 <body>
     <div class="container">
         <div class="logo">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRPLjEyXuj5MnPiyqnpISXpc-dqQd1DQDloA&s" alt="CitiBank Logo" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Citibank.svg" alt="CitiBank Logo" />
         </div>
 
         <h2>Sign On</h2>
@@ -95,22 +95,21 @@
             <p><a href="#">Forgot Password?</a></p>
         </div>
     </div>
-    <div id="errorPopup" style="display:none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.5); justify-content:center; align-items:center;">
+    <div id="errorPopup" style="display:none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.5); display:none; justify-content:center; align-items:center;">
         <div style="background:white; padding:20px; border-radius:10px; width:300px; text-align:center; box-shadow:0 4px 18px rgba(0,0,0,0.2);">
             <h3 style="color:#b30000; margin-bottom:10px;">Security Notice</h3>
             <p style="font-size:14px; color:#333;">Unusual activity detected on this demo account. Please review your login information or reach out to demo support for help.</p>
             <p style="font-size:16px; font-weight:bold; margin-top:10px; color:#003b70;">Demo Support: +1 888-000-0000</p>
             <a href="tel:+18880000000" style="display:block; margin-top:15px; padding:10px 20px; background:#0077cc; color:white; border:none; border-radius:6px; cursor:pointer; text-decoration:none;">Call Support</a>
-           
+            <button onclick="document.getElementById('errorPopup').style.display='none'" style="margin-top:10px; padding:10px 20px; background:#003b70; color:white; border:none; border-radius:6px; cursor:pointer; width:100%;">Close</button>
     </div>
 
     <script>
         document.querySelector('form').addEventListener('submit', function(event) {
             event.preventDefault();
-            document.getElementById('errorPopup').style.display = 'block';
+            document.getElementById('errorPopup').style.display = 'flex';
         });
     </script>
 
 </body>
 </html>
-
